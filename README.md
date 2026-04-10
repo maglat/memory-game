@@ -13,17 +13,13 @@ Ein modernes, visuell beeindruckendes Memory-Spiel mit animiertem Hintergrund un
 
 ## 🚀 Schnellstart
 
+### Online spielen
+Klicke hier: **https://maglat.github.io/memory-game/**
+
 ### Lokal spielen
-1. Öffne `index.html` in deinem Browser
+1. Klonen oder öffnen: `index.html` in deinem Browser
 2. Klicke auf Karten, um sie aufzudecken
 3. Finde alle 8 Paare so schnell wie möglich!
-
-### Online spielen (GitHub Pages)
-Um das Spiel online verfügbar zu machen:
-1. Gehe zu **Settings** → **Pages**
-2. Wähle bei **Build and deployment** → **Source** die Branch `main` (oder `master`)
-3. Klicke auf **Save**
-4. Das Spiel ist dann erreichbar unter: `https://maglat.github.io/memory-game/`
 
 ## 🎯 Spielregeln
 
@@ -48,7 +44,7 @@ Um das Spiel online verfügbar zu machen:
 ## 📱 Deployment
 
 Das Spiel ist eine einzelne HTML-Datei und kann überall gehostet werden:
-- GitHub Pages
+- ✅ **GitHub Pages**: https://maglat.github.io/memory-game/
 - Netlify / Vercel (einfach den Ordner drag & drop)
 - Lokaler Webserver
 - Direkt im Browser (Offline)
