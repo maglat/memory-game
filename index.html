@@ -13,7 +13,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 5px;
+            padding: 10px;
             overflow: hidden;
             touch-action: manipulation;
         }
@@ -21,29 +21,29 @@
         /* Mode Selector */
         .mode-selector {
             display: flex;
-            gap: 5px;
-            margin-bottom: 5px;
+            gap: 10px;
+            margin-bottom: 10px;
             width: 100%;
-            max-width: 350px;
+            max-width: 400px;
         }
         .mode-btn {
             flex: 1;
-            padding: 6px 8px;
+            padding: 10px;
             border: none;
-            border-radius: 15px;
-            font-size: 12px;
+            border-radius: 20px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             background: rgba(255,255,255,0.2);
             color: white;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .mode-btn.active {
             background: white;
             color: #764ba2;
-            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+            box-shadow: 0 4px 20px rgba(255,255,255,0.3);
         }
 
         /* Animated Background */
@@ -89,21 +89,21 @@
 
         h1 { 
             color: white; 
-            margin-bottom: 5px; 
+            margin-bottom: 10px; 
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
-            font-size: 2em;
+            font-size: 2.5em;
             animation: glow 3s ease-in-out infinite;
         }
         @keyframes glow { 0%, 100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); } 50% { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5); } }
         
         .stats {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             color: white;
-            font-size: 14px;
-            margin-bottom: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
             background: rgba(255,255,255,0.2);
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 50px;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -111,19 +111,19 @@
             justify-content: center;
         }
         
-        /* Single Player Layout */
+        /* Single Player Layout - ORIGINAL SIZE (large) */
         .single-player-layout {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
         }
         
         .game-board {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 6px;
+            gap: 10px;
             width: 100%;
             aspect-ratio: 1 / 1;
             perspective: 1000px;
@@ -138,10 +138,10 @@
             cursor: pointer;
             transform-style: preserve-3d;
             transition: transform 0.5s ease;
-            border-radius: 6px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-        .card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
         .card.flipped { transform: rotateY(180deg); }
         .card.matched { 
             animation: pulse 0.5s ease;
@@ -156,9 +156,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 28px;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.3);
         }
         .card-front {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -167,42 +167,42 @@
         }
         .card-front::after {
             content: '?';
-            font-size: 16px;
+            font-size: 20px;
             opacity: 0.7;
         }
         .card-back {
             background: white;
             transform: rotateY(180deg);
-            box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
         }
         
         .reset-btn {
-            margin-top: 10px;
-            padding: 8px 20px;
+            margin-top: 15px;
+            padding: 10px 25px;
             background: white;
             color: #764ba2;
             border: none;
-            border-radius: 40px;
-            font-size: 13px;
+            border-radius: 50px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             position: relative;
             z-index: 10;
         }
         .reset-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
-        /* Two Player Layout */
+        /* Two Player Layout - SMALLER */
         .two-player-layout {
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 95vh;
-            gap: 3px;
+            height: 90vh;
+            gap: 5px;
         }
         
         .player-area {
@@ -212,56 +212,54 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 2px;
-            border-radius: 10px;
+            padding: 5px;
+            border-radius: 15px;
         }
         
         .player-area .game-board {
             width: 100%;
             aspect-ratio: 1 / 1;
-            max-width: 35vh; /* Reduced from 40vh */
+            max-width: 40vh;
         }
         
         .player-stats {
             display: flex;
-            gap: 6px;
+            gap: 10px;
             color: white;
-            font-size: 9px;
-            margin: 2px 0;
+            font-size: 12px;
+            margin: 5px 0;
             background: rgba(255,255,255,0.15);
-            padding: 3px 8px;
+            padding: 5px 12px;
             border-radius: 50px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.2);
-            min-height: 20px;
-            align-items: center;
         }
         
-        /* Player 1 (Top) - Rotated 180 degrees so it looks from below/upside down */
+        /* Player 1 (Top) - Rotated 180 degrees */
         .player-1 {
             transform: rotate(180deg);
-            padding: 2px;
+            padding: 5px;
         }
         
-        /* Counter-rotate card content in player 1 so emojis are upright when viewed from top */
-        .player-1 .card-back {
-            transform: rotateY(180deg) rotate(180deg) !important;
+        /* Rotate emoji 180° for player 1 so it's upright when viewed from top */
+        .player-1 .emoji-wrapper {
+            transform: rotate(180deg);
         }
         
-        /* Player 2 (Bottom) - Normal orientation */
+        /* Player 2 (Bottom) - Normal */
         .player-2 {
-            border-top: 1px solid rgba(255,255,255,0.2);
+            border-top: 2px solid rgba(255,255,255,0.2);
         }
         
-        /* Hide elements based on mode */
+        /* Hide elements based on mode - FIXED WITH !important */
         .single-player-only { display: block; }
-        .two-player-only { display: none; }
+        .two-player-only { display: none !important; }
         
-        .mode-single .single-player-only { display: block; }
-        .mode-single .two-player-only { display: none; }
+        .mode-single .single-player-only { display: block !important; }
+        .mode-single .two-player-only { display: none !important; }
         
-        .mode-two .single-player-only { display: none; }
-        .mode-two .two-player-only { display: block; }
+        .mode-two .single-player-only { display: none !important; }
+        .mode-two .two-player-only { display: block !important; }
         
         .win-modal {
             display: none;
@@ -274,13 +272,13 @@
         }
         .win-content {
             background: rgba(255,255,255,0.95);
-            padding: 25px;
-            border-radius: 15px;
+            padding: 30px;
+            border-radius: 20px;
             text-align: center;
             animation: slideIn 0.5s ease;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             backdrop-filter: blur(10px);
-            max-width: 85%;
+            max-width: 80%;
         }
         @keyframes pulse { 0% { transform: rotateY(180deg) scale(1); } 50% { transform: rotateY(180deg) scale(1.15); } 100% { transform: rotateY(180deg) scale(1); } }
         @keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -288,8 +286,8 @@
         /* Fireworks */
         .firework-particle {
             position: absolute;
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             pointer-events: none;
             z-index: 100;
@@ -310,11 +308,11 @@
         }
         
         @media (max-width: 400px) {
-            h1 { font-size: 1.3em; }
-            .stats { font-size: 12px; gap: 8px; padding: 5px 10px; }
-            .player-stats { font-size: 8px; gap: 4px; padding: 2px 6px; }
-            .card-face { font-size: 20px; }
-            .card-front::after { font-size: 14px; }
+            h1 { font-size: 1.5em; }
+            .stats { font-size: 14px; gap: 10px; padding: 6px 12px; }
+            .player-stats { font-size: 10px; gap: 6px; padding: 4px 8px; }
+            .card-face { font-size: 24px; }
+            .card-front::after { font-size: 18px; }
         }
     </style>
 </head>
@@ -328,21 +326,21 @@
     </div>
     
     <div class="mode-selector">
-        <button class="mode-btn active" id="btn-single" onclick="setMode('single')">🎮 Einzel</button>
-        <button class="mode-btn" id="btn-two" onclick="setMode('two')">👥 Zwei</button>
+        <button class="mode-btn active" id="btn-single" onclick="setMode('single')">🎮 Einzelspieler</button>
+        <button class="mode-btn" id="btn-two" onclick="setMode('two')">👥 Zweierspieler</button>
     </div>
     
     <!-- Single Player Mode -->
     <div id="single-player-container">
-        <h1 class="single-player-only">🎮 Memory</h1>
+        <h1 class="single-player-only">🎮 Memory Spiel</h1>
         <div class="stats single-player-only">
             <span>🕐 <span id="time-single">0:00</span></span>
-            <span>🎯 <span id="moves-single">0</span></span>
-            <span>🎖️ <span id="pairs-single">0</span>/8</span>
+            <span>🎯 Züge: <span id="moves-single">0</span></span>
+            <span>🎖️ Paare: <span id="pairs-single">0</span>/8</span>
         </div>
         <div class="single-player-layout single-player-only">
             <div class="game-board" id="board-single"></div>
-            <button class="reset-btn" onclick="resetGame()">🔄 Neu</button>
+            <button class="reset-btn single-player-only" onclick="resetGame()">🔄 Neues Spiel</button>
         </div>
     </div>
     
@@ -358,7 +356,7 @@
             <div class="game-board" id="board-p1"></div>
         </div>
         
-        <!-- Player 2 (Bottom) - Normal orientation -->
+        <!-- Player 2 (Bottom) - Normal -->
         <div class="player-area player-2">
             <div class="game-board" id="board-p2"></div>
             <div class="player-stats">
@@ -368,15 +366,15 @@
             </div>
         </div>
         
-        <button class="reset-btn two-player-only" style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 20;" onclick="resetGame()">🔄 Neu</button>
+        <button class="reset-btn two-player-only" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 20;" onclick="resetGame()">🔄 Neues Spiel</button>
     </div>
     
     <div class="win-modal" id="winModal">
         <div class="win-content">
-            <h2 style="font-size: 40px; margin-bottom: 10px;">🎉</h2>
-            <h2 id="winner-title" style="color: #764ba2; margin-bottom: 15px;">Gewonnen!</h2>
+            <h2 style="font-size: 48px; margin-bottom: 10px;">🎉</h2>
+            <h2 id="winner-title" style="color: #764ba2; margin-bottom: 20px;">Gewonnen!</h2>
             <p id="winner-stats"></p>
-            <button class="reset-btn" onclick="resetGame()" style="margin-top: 15px;">Nochmal</button>
+            <button class="reset-btn" onclick="resetGame()" style="margin-top: 20px;">Nochmal spielen</button>
         </div>
     </div>
 
@@ -396,19 +394,18 @@
         }
 
         function setMode(mode) {
+            // Clear win modal first
+            document.getElementById('winModal').style.display = 'none';
+            
             currentMode = mode;
             
             // Update buttons
             document.getElementById('btn-single').classList.toggle('active', mode === 'single');
             document.getElementById('btn-two').classList.toggle('active', mode === 'two');
             
-            // Toggle body class for CSS
+            // Toggle body class for CSS - use !important in CSS
             document.body.classList.remove('mode-single', 'mode-two');
             document.body.classList.add(`mode-${mode}`);
-            
-            // Toggle display
-            document.getElementById('single-player-container').classList.toggle('single-player-only', mode === 'single');
-            document.getElementById('two-player-container').classList.toggle('two-player-only', mode === 'two');
             
             resetGame();
         }
@@ -419,10 +416,20 @@
             card.dataset.emoji = emoji;
             card.dataset.index = index;
             card.dataset.player = playerId;
-            card.innerHTML = `
-                <div class="card-face card-front"></div>
-                <div class="card-face card-back">${emoji}</div>
-            `;
+            
+            // For player 1, wrap emoji in a div to rotate it 180 degrees
+            if (playerId === 'p1') {
+                card.innerHTML = `
+                    <div class="card-face card-front"></div>
+                    <div class="card-face card-back"><div class="emoji-wrapper">${emoji}</div></div>
+                `;
+            } else {
+                card.innerHTML = `
+                    <div class="card-face card-front"></div>
+                    <div class="card-face card-back">${emoji}</div>
+                `;
+            }
+            
             card.addEventListener('click', () => flipCard(card, playerId));
             return card;
         }
@@ -442,12 +449,12 @@
         }
 
         function createFirework(x, y) {
-            const particleCount = 20;
+            const particleCount = 25;
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'firework-particle';
                 const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 70 + Math.random() * 70;
+                const velocity = 80 + Math.random() * 80;
                 const tx = Math.cos(angle) * velocity + 'px';
                 const ty = Math.sin(angle) * velocity + 'px';
                 particle.style.setProperty('--tx', tx);
@@ -461,17 +468,17 @@
             }
             
             // Add sparkles
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 8; i++) {
                 setTimeout(() => {
                     const sparkle = document.createElement('div');
                     sparkle.className = 'sparkle';
                     sparkle.innerHTML = '✨';
-                    sparkle.style.left = (x - 12 + Math.random() * 24) + 'px';
-                    sparkle.style.top = (y - 12 + Math.random() * 24) + 'px';
-                    sparkle.style.fontSize = (10 + Math.random() * 12) + 'px';
+                    sparkle.style.left = (x - 15 + Math.random() * 30) + 'px';
+                    sparkle.style.top = (y - 15 + Math.random() * 30) + 'px';
+                    sparkle.style.fontSize = (10 + Math.random() * 15) + 'px';
                     document.body.appendChild(sparkle);
                     setTimeout(() => sparkle.remove(), 800);
-                }, i * 30);
+                }, i * 40);
             }
         }
 
@@ -536,29 +543,29 @@
                 document.getElementById('winner-title').textContent = `${winnerName} gewinnt!`;
                 document.getElementById('winner-title').style.color = winnerColor;
                 document.getElementById('winner-stats').innerHTML = 
-                    `<strong>${winnerMoves} Züge</strong> • ${winnerPairs}/8 Paare<br><br>
-                    ${winningPlayerId === 'p1' ? 'Spieler 2: ' + games.p2.pairs + '/8' : 'Spieler 1: ' + games.p1.pairs + '/8'}`;
+                    `<strong>${winnerMoves} Züge</strong> • ${winnerPairs}/8 Paare gefunden<br><br>
+                    ${winningPlayerId === 'p1' ? 'Spieler 2: ' + games.p2.pairs + '/8 Paare' : 'Spieler 1: ' + games.p1.pairs + '/8 Paare'}`;
                 
                 // Celebration fireworks
-                for (let i = 0; i < 6; i++) {
+                for (let i = 0; i < 8; i++) {
                     setTimeout(() => {
                         const x = window.innerWidth / 2 + (Math.random() - 0.5) * window.innerWidth * 0.6;
                         const y = window.innerHeight / 2 + (Math.random() - 0.5) * window.innerHeight * 0.6;
                         createFirework(x, y);
-                    }, i * 120);
+                    }, i * 150);
                 }
             } else {
                 clearInterval(games.single.timer);
                 document.getElementById('winner-title').textContent = 'Gewonnen! 🎉';
                 document.getElementById('winner-stats').innerHTML = 
-                    `<strong>${games.single.moves} Züge</strong> • 8/8 Paare`;
+                    `<strong>${games.single.moves} Züge</strong> • 8/8 Paare gefunden`;
                 
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 5; i++) {
                     setTimeout(() => {
                         const x = window.innerWidth / 2 + (Math.random() - 0.5) * 300;
                         const y = window.innerHeight / 2 + (Math.random() - 0.5) * 100;
                         createFirework(x, y);
-                    }, i * 150);
+                    }, i * 200);
                 }
             }
             
@@ -597,6 +604,11 @@
             if (games.single.timer) clearInterval(games.single.timer);
             if (games.p1.timer) clearInterval(games.p1.timer);
             if (games.p2.timer) clearInterval(games.p2.timer);
+            
+            // Clear all boards first to ensure clean state
+            document.getElementById('board-single').innerHTML = '';
+            document.getElementById('board-p1').innerHTML = '';
+            document.getElementById('board-p2').innerHTML = '';
             
             // Reset based on mode
             if (currentMode === 'single') {
