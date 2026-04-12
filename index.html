@@ -111,7 +111,7 @@
             justify-content: center;
         }
         
-        /* Single Player Layout - BIG (original size) */
+        /* Single Player Layout - BIG */
         .single-player-layout {
             display: flex;
             flex-direction: column;
@@ -239,11 +239,6 @@
         .player-1 {
             transform: rotate(180deg);
             padding: 5px;
-        }
-        
-        /* Rotate emoji 180° for player 1 so it's upright when viewed from top */
-        .player-1 .emoji-wrapper {
-            transform: rotate(180deg);
         }
         
         /* Player 2 (Bottom) - Normal */
@@ -417,11 +412,11 @@
             card.dataset.index = index;
             card.dataset.player = playerId;
             
-            // For player 1, wrap emoji in a div to rotate it 180 degrees
+            // For player 1, we rotate the card-back content 180 degrees
             if (playerId === 'p1') {
                 card.innerHTML = `
                     <div class="card-face card-front"></div>
-                    <div class="card-face card-back"><div class="emoji-wrapper">${emoji}</div></div>
+                    <div class="card-face card-back" style="transform: rotateY(180deg) rotate(180deg);">${emoji}</div>
                 `;
             } else {
                 card.innerHTML = `
