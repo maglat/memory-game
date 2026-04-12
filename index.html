@@ -235,23 +235,25 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
         
-        /* Player 2 (Bottom) - Rotated 180 degrees */
-        .player-2 {
+        /* Player 1 (Top) - Rotated 180 degrees so it looks from below/upside down */
+        .player-1 {
             transform: rotate(180deg);
             padding: 5px;
         }
         
-        /* Counter-rotate card content in player 2 so emojis are upright */
-        .player-2 .card-back {
+        /* Counter-rotate card content in player 1 so emojis are upright when viewed from below */
+        .player-1 .card-back {
             transform: rotateY(180deg) rotate(180deg);
         }
         
-        .player-2 .card-back.flipped {
+        .player-1 .card-back.flipped {
             transform: rotateY(180deg) rotate(180deg);
         }
         
-        /* Player 1 specific styling */
-        .player-1 { border-bottom: 2px solid rgba(255,255,255,0.2); }
+        /* Player 2 (Bottom) - Normal orientation */
+        .player-2 {
+            border-top: 2px solid rgba(255,255,255,0.2);
+        }
         
         /* Hide elements based on mode */
         .single-player-only { display: block; }
@@ -348,7 +350,7 @@
     
     <!-- Two Player Mode -->
     <div id="two-player-container" class="two-player-layout two-player-only">
-        <!-- Player 1 (Top) -->
+        <!-- Player 1 (Top) - Rotated 180 degrees -->
         <div class="player-area player-1">
             <div class="player-stats">
                 <span>🕐 <span id="time-p1">0:00</span></span>
@@ -358,7 +360,7 @@
             <div class="game-board" id="board-p1"></div>
         </div>
         
-        <!-- Player 2 (Bottom) - Rotated -->
+        <!-- Player 2 (Bottom) - Normal orientation -->
         <div class="player-area player-2">
             <div class="game-board" id="board-p2"></div>
             <div class="player-stats">
