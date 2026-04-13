@@ -111,7 +111,7 @@
             justify-content: center;
         }
         
-        /* Single Player Layout - BIG */
+        /* Single Player Layout - BIG (500px) */
         .single-player-layout {
             display: flex;
             flex-direction: column;
@@ -176,6 +176,11 @@
             box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
         }
         
+        /* THE FIX: 360deg because player-1 container is already rotated 180deg */
+        .player-1 .emoji-rotated {
+            transform: rotate(360deg);
+        }
+        
         .reset-btn {
             margin-top: 15px;
             padding: 10px 25px;
@@ -196,7 +201,7 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         
-        /* Two Player Layout - SMALLER */
+        /* Two Player Layout - SMALLER (40vh) */
         .two-player-layout {
             display: flex;
             flex-direction: column;
@@ -412,11 +417,11 @@
             card.dataset.index = index;
             card.dataset.player = playerId;
             
-            // For player 1, we rotate the card-back content 180 degrees
+            // For player 1, wrap emoji in span to rotate it 360 degrees
             if (playerId === 'p1') {
                 card.innerHTML = `
                     <div class="card-face card-front"></div>
-                    <div class="card-face card-back" style="transform: rotateY(180deg) rotate(180deg);">${emoji}</div>
+                    <div class="card-face card-back"><span class="emoji-rotated">${emoji}</span></div>
                 `;
             } else {
                 card.innerHTML = `
